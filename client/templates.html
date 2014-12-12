@@ -1,0 +1,18 @@
+<template name="home">
+  <h1>Telescope Demo</h1>
+
+  <h3>Posts</h3>
+
+  <ul>
+    {{#each posts}}
+      <a href="/singlepost"><li>{{name}}</li></a>
+    {{/each}}
+  </ul>
+</template>
+
+<template name="singlepost">
+  <h1>Telescope Demo</h1>
+
+  <a href="/">Go Back</a>
+  <h3>Single Post</h3>
+</template>

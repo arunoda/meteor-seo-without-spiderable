@@ -1,0 +1,13 @@
+<template name="layout">
+  <div id="content">
+    {{> yield}}
+  </div>
+  
+  <p class="notice">
+  To render the page on the server, append <code>?_escaped_fragment_=</code> to the end of the URL and reload.
+  </p>
+  <div id="add">
+    <a href="https://github.com/arunoda/meteor-ssr-demo-page-rendering">Get Source</a> <br>
+    <a class="small" href="https://bulletproofmeteor.com/">Sponsored by BulletProof Meteor :D</a>
+  </div>
+</template>
