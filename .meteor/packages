@@ -4,8 +4,5 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
-insecure
 iron:router
 meteorhacks:ssr
-
