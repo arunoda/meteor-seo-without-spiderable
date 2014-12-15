@@ -6,3 +6,6 @@
 meteor-platform
 iron:router
 meteorhacks:ssr
+meteorhacks:fast-render
+meteorhacks:picker
+

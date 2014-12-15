@@ -5,7 +5,7 @@
 
   <ul>
     {{#each posts}}
-      <a href="/singlepost"><li>{{name}}</li></a>
+      <a href="/post/{{_id}}"><li>{{name}}</li></a>
     {{/each}}
   </ul>
 </template>
@@ -14,5 +14,5 @@
   <h1>Telescope Demo</h1>
 
   <a href="/">Go Back</a>
-  <h3>Single Post</h3>
+  <h3>{{post.name}}</h3>
 </template>

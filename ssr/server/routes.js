@@ -1,32 +1,26 @@
 var css = Assets.getText('style.css');
-Router.route('/', function () {
-  if(canSSR(this.url)) {
-    var posts = Posts.find();
-    var html = SSR.render('layout', {
-      css: css,
-      template: "home",
-      data: {posts: posts}
-    });
+var seoPicker = Picker.filter(function(req, res) {
+  return /_escaped_fragment_/.test(req.url);
+});
 
-    this.response.end(html);
-  } else {
-    this.next();
-  }
-}, {where: 'server'});
+seoPicker.route('/', function(params, req, res) {
+  var posts = Posts.find();
+  var html = SSR.render('layout', {
+    css: css,
+    template: "home",
+    data: {posts: posts}
+  });
 
-Router.route('/singlepost', function () {
-  if(canSSR(this.url)) {
-    var html = SSR.render('layout', {
-      css: css,
-      template: "singlepost"
-    });
-    this.response.end(html);
-  } else {
-    this.next();
-  }
-}, {where: 'server'});
+  res.end(html);
+});
 
+seoPicker.route('/post/:_id', function(params, req, res) {
+  var post = Posts.findOne(params._id);
+  var html = SSR.render('layout', {
+    css: css,
+    template: "singlepost",
+    data: {post: post}
+  });
 
-function canSSR (url) {
-  return /_escaped_fragment_/.test(url);
-}
+  res.end(html);
+});
