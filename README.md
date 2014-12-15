@@ -1,8 +1,5 @@
-## Server Rendered Meteor Site
+## Meteor SEO support without spiderable (and PhantomJS)
 
-[This](http://server-rendered.meteor.com/) Meteor app is 100% rendered on the server.<br>
-(I'm not sure it's okay to call this app as a Meteor app)
+[This](http://seo-without-spiderable.meteor.com/) Meteor app is using [`meteorhacks:ssr`](https://atmospherejs.com/meteorhacks/ssr) package to serve HTML content for SEO bots. So, we don't need PhantomJS anymore.
 
-This is created with the [`meteorhacks:ssr`](https://atmospherejs.com/meteorhacks/ssr) package.
-
-[![Server Side Render Demo](https://cldup.com/MM8S3759Vz.png)](http://server-rendered.meteor.com/)
+[![Server Side Render Demo](https://cldup.com/iCG9ybiHem.png)](http://seo-without-spiderable.meteor.com/)
